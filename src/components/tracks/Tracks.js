@@ -7,7 +7,7 @@ export default class Tracks extends Component {
       <Consumer>
         {value => {
           console.log(value);
-          return <h1>Trackss</h1>;
+          return <h1>Trackssss</h1>;
         }}
       </Consumer>
     );
