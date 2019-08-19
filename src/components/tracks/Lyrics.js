@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
 import Spinner from "../layout/Spinner";
 
 export default class Lyrics extends Component {
@@ -65,7 +66,8 @@ track.get?track_id=${this.props.match.params.id}&apikey=${
             </li>
 
             <li className="list-group-item">
-              <strong>Release Date</strong>: {track.first_release_date}
+              <strong>Release Date</strong>:{" "}
+              <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
             </li>
           </ul>
         </>
