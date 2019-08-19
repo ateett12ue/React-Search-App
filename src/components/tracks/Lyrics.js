@@ -66,7 +66,7 @@ track.get?track_id=${this.props.match.params.id}&apikey=${
             </li>
 
             <li className="list-group-item">
-              <strong>Release Date</strong>:{" "}
+              <strong>Updated On</strong>:{" "}
               <Moment format="MM/DD/YYYY">{track.updated_time}</Moment>
             </li>
           </ul>
