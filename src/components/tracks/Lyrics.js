@@ -41,7 +41,6 @@ track.get?track_id=${this.props.match.params.id}&apikey=${
     ) {
       return <Spinner />;
     } else {
-      console.log(track);
       return (
         <>
           <Link to="/" className="btn btn-dark btn-sm mb-4">
@@ -61,11 +60,12 @@ track.get?track_id=${this.props.match.params.id}&apikey=${
               <strong>Album ID</strong>: {track.album_id}
             </li>
             <li className="list-group-item">
-              <strong>Song Genre</strong>:{" "}
-              {
-                track.primary_genres.music_genre_list[0].music_genre
-                  .music_genre_name
-              }
+              <strong>Explicit Words</strong>:{" "}
+              {track.explict === 0 ? "No" : "Yes"}
+            </li>
+
+            <li className="list-group-item">
+              <strong>Release Date</strong>: {track.first_release_date}
             </li>
           </ul>
         </>
